@@ -9,9 +9,15 @@
 </head>
 <body ng-app="app" ng-controller="MainController as mainCtrl">
 
-  <div class="container">
+  <div>
     <h1>{{mainCtrl.title}}</h1>
+    <input type="text" ng-model="mainCtrl.searchInput">
   </div>
+  <p>{{mainCtrl.searchInput}}</p>
+  <h3>List of Books</h3>
+  <ul>
+    <li ng-repeat="book in mainCtrl.books">{{book.title}}, {{book.year}}</li>
+  </ul>
 
 </body>
 </html>
